@@ -1,9 +1,9 @@
 {
-  "name": "My Weather App",
-  "short_name": "Weather",
-  "display": "minimal-ui",
-  "start_url": "html/",
-  "theme_color": "#111",
+  "name": "Safe Farming",
+  "short_name": "Safe Farming",
+  "display": "standalone",
+  "start_url": "/",
+  "theme_color": "#fff",
   "background_color": "#888",
   "icons": [
     {
@@ -26,11 +26,7 @@
       "sizes": "96x96",
       "type": "image/png"
     },
-    {
-      "src": "assets/img/android-chrome-144x144.png",
-      "sizes": "144x144",
-      "type": "image/png"
-    },
+    
     {
       "src": "assets/img/android-chrome-192x192.png",
       "sizes": "192x192",

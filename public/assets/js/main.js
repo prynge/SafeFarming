@@ -1,3 +1,8 @@
+navigator.serviceWorker && navigator.serviceWorker.register('assets/js/sw.js').then(function(registration) {
+  console.log('Excellent, registered with scope: ', registration.scope);
+});
+
+
 (function($) {
 
 	var	$window = $(window),
