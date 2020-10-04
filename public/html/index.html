@@ -10,26 +10,19 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="manifest" href="manifest.json" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/master.css" />
+		<link rel="manifest" href="../manifest.json" />
 		
-		<link rel="apple-touch-icon" sizes="57x57" href="assets/img/apple-touch-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="assets/img/apple-touch-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-touch-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-touch-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-touch-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="assets/img/apple-touch-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-touch-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="assets/img/apple-touch-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
-		<link rel="manifest" href="assets/img/site.webmanifest">
-		<link rel="mask-icon" href="assets/img/safari-pinned-tab.svg" color="#00a300">
-		<link rel="shortcut icon" href="assets/img/favicon.ico">
-		<meta name="msapplication-TileColor" content="#00a300">
-		<meta name="msapplication-config" content="assets/img/browserconfig.xml">
-		<meta name="theme-color" content="#ffffff">
+		<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+    <link rel="manifest" href="../assets/img/site.webmanifest">
+    <link rel="mask-icon" href="../assets/img/safari-pinned-tab.svg" color="#6fb628">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+    <meta name="msapplication-TileColor" content="#6fb628">
+    <meta name="msapplication-config" content="../assets/img/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
 	</head>
 	<body class="is-preload">
@@ -41,7 +34,7 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<span class="image"><img src="images/logo.jpeg" alt="SafeFarming" /></span>
+							<span class="image"><img src="../images/logo.jpeg" alt="SafeFarming" /></span>
 						</div>
 
 					<!-- Nav -->
@@ -63,7 +56,8 @@
 							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
+            </ul>
+            <a href="#">Se désabonner</a>
 
 				</div>
 
@@ -75,16 +69,9 @@
 				<!-- Intro -->
 					<section id="top" class="one dark cover">
 						<div class="container">
-							
 							<header>
 								<h1>Safe Farming</h1>
-								<h2 class="alt">Salut, je suis <strong>Safe Farming</strong> grace à mon système d'alerte, Je met les exploitations agricoles à l'abris des désastres causés par les changements climatiques et les catastrophes naturelles, je protège et participes considérablement à l'amélioration des rendements par la mise à disposition des informations et données satellitaires.</h2>
 							</header>
-
-							<footer>
-								<a href="#portfolio" class="button scrolly">Commencer</a>
-							</footer>
-
 						</div>
 					</section>
 
@@ -93,10 +80,11 @@
 						<div class="container">
 
 							<header>
-								<h2>Comment ça marche ?</h2>
+								<h2>Les dernières infos</h2>
 							</header>
 
-							<p>Safe Farming est une application web qui vous informe avec une interface simple et intuitive et par des notifications. Pour y accéder, il vous suffit de souscrire à <a>un abonnement annuel</a> de 300 FCFA.</p>
+              <div id="info"></div>
+							<p>Safe Farming est une application web qui vous informe avec une interface simple et intuitive et par des notifications. Pour y accéder, il vous suffit de souscrire à <a>un abonnement</a> de 300 FCFA.</p>
 							<p class="ul">Votre abonnement vous donne droit à 
 								<ul class="ul">
 									<li>Des notifications météos</li>
@@ -104,10 +92,6 @@
 									<li>Des astuces en rapport avec les pratiques agricoles</li>
 								</ul>
 							</p>
-
-							<footer>
-								<a href="./html/" class="button">Je m'abonne</a>
-							</footer>
 
 						</div>
 					</section>
@@ -117,17 +101,44 @@
 						<div class="container">
 
 							<header>
-								<h2>Qui sommes-nous ?</h2>
+								<h2>Météo</h2>
 							</header>
 
 							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
 
-							<p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus
-							ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae
-							laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem
-							parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper
-							dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec
-							ornare iaculis.</p>
+              <section class='panel'>
+                <div class="form">
+                  <input class='searchbar transparent' id='search1' type='text' placeholder='enter city, country' />
+                  <input class='button transparent' type="submit" onclick="submit('search1');" value='GO' />
+                </div>
+                <div class='group'>
+                  <h2 id='dt'></h2>
+                  <h1 id= "city"></h1>
+                  <p> <a id="temperature" href="#" onclick="switchUnits(); return false;" title ="Click to switch between metric and impreial units"></a><span id = "weather"> Put your city name in the field above and trigger the GO button</p>
+                  <h3 id='wind'></h3>
+                  <h3 id='humidity'></h3>
+                </div>
+                <div class='forecast' id='forecast'></div>
+              </section>
+          
+              <section class="panel-mobile">
+                <div class="form">
+                  <input class='searchbar transparent' id='search' type='text' placeholder='enter city, country' />
+                  <input class='button transparent' type="submit" onclick="submit('search');" value='GO' />
+                </div>
+                <div class="city">
+                  <h1 id= "city2"></h1>
+                  <p> <span id='dt2'></span><span id = "weather2"></span></p>
+                </div>
+                <div class="temp">
+                  <p>
+                    <a id="temperature2" href="#" onclick="switchUnits(); return false;" title ="Click to switch between metric and impreial units"></a>
+                  </p>
+                </div>
+                <p class="detail" id="detail"></p>
+                <div class="forecast" id="forecast2"></div>
+              </section>
+							
 
 						</div>
 					</section>
@@ -174,13 +185,14 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+      <script src="../assets/js/util.js"></script>
+      <script src="../assets/js/script.js" charset="utf-8"></script>
+			<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>
