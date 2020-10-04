@@ -1803,6 +1803,10 @@ input, select, textarea {
 		padding-left: 1em;
 	}
 
+	.ul {
+		text-align: left;
+	}
+
 		ul li {
 			padding-left: 0.5em;
 		}
