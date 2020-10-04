@@ -1,6 +1,6 @@
 <script>
     var config = {
-        messagingSenderId: '<replace-with-your-sender-id>'
+        messagingSenderId: '<136650461628>'
     };
     firebase.initializeApp(config);
 </script>
