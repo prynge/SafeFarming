@@ -15,7 +15,7 @@ self.addEventListener('install', function(e) {
         '/index.html',
         '/404.html',
         '/manifest.json',
-        '/assets/img/logo.ico',
+        '/assets/img/favicon.ico',
         '/assets/js/main.js',
         '/assets/js/breakpoints.min.js',
         '/assets/js/browser.min.js',
