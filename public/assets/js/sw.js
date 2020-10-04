@@ -46,6 +46,7 @@ self.addEventListener('install', function(e) {
         '/assets/webfonts/fa-solid-900.woff',
         '/assets/webfonts/fa-solid-900.woff2',
         '/images/logo.jpeg',
+        '/html/',
       ]);
     })
   );

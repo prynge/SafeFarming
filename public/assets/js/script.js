@@ -2,6 +2,11 @@
   console.log('Excellent, registered with scope: ', registration.scope);
 });*/
 
+var nasaData = {
+  info: document.querySelector ("#info"),
+}
+
+
 var weatherData = {
   city: document.querySelector ("#city"),
   weather: document.querySelector ("#weather"),
