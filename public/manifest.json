@@ -2,7 +2,7 @@
   "name": "My Weather App",
   "short_name": "Weather",
   "display": "minimal-ui",
-  "start_url": "/",
+  "start_url": "/info.html",
   "theme_color": "#111",
   "background_color": "#888",
   "icons": [
