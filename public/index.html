@@ -48,8 +48,8 @@
 						<nav id="nav">
 							<ul>
 								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Comment ça marche ?</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-user">À propos de nous</span></a></li>
+								<li><a href="#howto" id="portfolio-link"><span class="icon solid fa-th">How it works ?</span></a></li>
+								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About</span></a></li>
 								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contacts</span></a></li>
 							</ul>
 						</nav>
@@ -78,36 +78,36 @@
 							
 							<header>
 								<h1>Safe Farming</h1>
-								<h2 class="alt">Salut, je suis <strong>Safe Farming</strong> grace à mon système d'alerte, je mets les exploitations agricoles à l'abris des désastres causés par les changements climatiques et les catastrophes naturelles, je protège et participes considérablement à l'amélioration des rendements par la mise à disposition des informations et données satellitaires.</h2>
+								<h2 class="alt">Hi! I'm <strong>Safe Farming</strong>. Thanks to my alert System, I help to protect farms from disasters caused by climate changes and natural disasters, I participate considerably impproving yields by making informations and satelite data available .</h2>
 							</header>
 
 							<footer>
-								<a href="#portfolio" class="button scrolly">Commencer</a>
+								<a href="#howto" class="button scrolly">Start</a>
 							</footer>
 
 						</div>
 					</section>
 
 				<!-- Portfolio -->
-					<section id="portfolio" class="two">
+					<section id="howto" class="two">
 						<div class="container">
 
 							<header>
-								<h2>Comment ça marche ?</h2>
+								<h2>How it works ?</h2>
 							</header>
 
-							<p>Safe Farming est une application web qui vous informe avec une interface simple et intuitive et par des notifications. Pour y accéder, il vous suffit de souscrire à <a>un abonnement annuel</a> de 6000 FCFA.</p>
-							<p class="ul">Votre abonnement vous donne droit à 
+							<p>Safe Farming is a web application which informs you with a simple and intuitive interface and with notifications. To get it, you just need an annual <a>subscription</a>.
+							<p class="ul">Your subscription entitles you to
 								<ul class="ul">
-									<li>Des notifications météos</li>
-									<li>Des alertes catastrophes naturelles</li>
-									<li>Des astuces en rapport avec les pratiques agricoles</li>
+									<li>Weather notifications</li>
+									<li>Natural disaster alerts</li>
+									<li>Some hints about farming.</li>
 								</ul>
 							</p>
-							<p>Vous avez la possibilité de souscrire à <b>1000 FCFA pour le mois</b> ou à <b>4000 FCFA pour le trimestre.</b></p>
+							<p>You can suscribe <b>for the month</b> or <b>for the trimester.</b></p>
 
 							<footer>
-								<a href="./html/" class="button">Je m'abonne</a>
+								<a href="./html/index.html" class="button">Suscribe</a>
 							</footer>
 
 						</div>
@@ -118,12 +118,12 @@
 						<div class="container">
 
 							<header>
-								<h2>Qui sommes-nous ?</h2>
+								<h2>About us</h2>
 							</header>
 
 							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
 
-							<p>Nous sommes une équipe aux profils diversifiés ayant pour objectif commun la résolution d'un probleme. Nous sommes Agro-entrepreneur, Développeur, Designer, Marketer. Nous sommes <b>Detect'or</b>.</p>
+							<p>We are a team with varied profile with the common objective of solving a problem. We are Agro-entrepreneur, Developer, Designer, Marketer. We are <b>Detect'or</b>.</p>
 
 						</div>
 					</section>
@@ -133,10 +133,10 @@
 						<div class="container">
 
 							<header>
-								<h2>Contactez-nous !</h2>
+								<h2>Contact us</h2>
 							</header>
 
-							<p>Une question, une suggestion ? Ecrivez nous !</p>
+							<p>A question, a suggestion ? Get in touch !</p>
 
 							<form method="post" action="#">
 								<div class="row">
@@ -166,58 +166,58 @@
 
 			</div>
 		<!--script de notif-->
-		<div id="token"></div>
-    		<div id="msg"></div>
-    		<div id="notis"></div>
-    		<div id="err"></div>
-    		<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
-    		<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-messaging.js"></script>
-    		<script>
-        		MsgElem = document.getElementById("msg");
-        		TokenElem = document.getElementById("token");
-        		NotisElem = document.getElementById("notis");
-        		ErrElem = document.getElementById("err");
-        		// Initialize Firebase
-        		// TODO: Replace with your project's customized code snippet
-        		var config = {
-            		'messagingSenderId': '136650461628',
-           		 'apiKey': 'YOUR_API_KEY',
-            		'projectId': 'safe-farming',
-            		'appId': 'YOUR_APP_ID',
-        		};
-        		firebase.initializeApp(config);
+			<div id="token"></div>
+			<div id="msg"></div>
+			<div id="notis"></div>
+			<div id="err"></div>
+			<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-messaging.js"></script>
+			<script>
+					MsgElem = document.getElementById("msg");
+					TokenElem = document.getElementById("token");
+					NotisElem = document.getElementById("notis");
+					ErrElem = document.getElementById("err");
+					// Initialize Firebase
+					// TODO: Replace with your project's customized code snippet
+					var config = {
+							'messagingSenderId': '136650461628',
+						'apiKey': 'YOUR_API_KEY',
+							'projectId': 'safe-farming',
+							'appId': 'YOUR_APP_ID',
+					};
+					firebase.initializeApp(config);
 
-        		const messaging = firebase.messaging();
-        		messaging
-            		.requestPermission()
-            		.then(function () {
-                	MsgElem.innerHTML = "Notification permission granted." 
-                	console.log("Notification permission granted.");
-                
-                	// get the token in the form of promise
-                	return messaging.getToken()
-            		})
-            		.then(function(token) {
-                	TokenElem.innerHTML = "token is : " + token
-            		})
-            		.catch(function (err) {
-               		 ErrElem.innerHTML =  ErrElem.innerHTML + "; " + err
-                	console.log("Unable to get permission to notify.", err);
-            		});
+					const messaging = firebase.messaging();
+					messaging
+							.requestPermission()
+							.then(function () {
+								MsgElem.innerHTML = "Notification permission granted." 
+								console.log("Notification permission granted.");
+							
+								// get the token in the form of promise
+								return messaging.getToken()
+							})
+							.then(function(token) {
+								TokenElem.innerHTML = "token is : " + token
+							})
+							.catch(function (err) {
+								ErrElem.innerHTML =  ErrElem.innerHTML + "; " + err
+								console.log("Unable to get permission to notify.", err);
+							});
 
-        		let enableForegroundNotification = true;
-        		messaging.onMessage(function(payload) {
-            		console.log("Message received. ", payload);
-            		NotisElem.innerHTML = NotisElem.innerHTML + JSON.stringify(payload);
+					let enableForegroundNotification = true;
+					messaging.onMessage(function(payload) {
+							console.log("Message received. ", payload);
+							NotisElem.innerHTML = NotisElem.innerHTML + JSON.stringify(payload);
 
-            		if(enableForegroundNotification) {
-                	const {title, ...options} = JSON.parse(payload.data.notification);
-                  	 navigator.serviceWorker.getRegistrations().then(registration => {
-                    registration[0].showNotification(title, options);
-                   });
-            	  }
-        	});
-    		</script>
+							if(enableForegroundNotification) {
+								const {title, ...options} = JSON.parse(payload.data.notification);
+									navigator.serviceWorker.getRegistrations().then(registration => {
+									registration[0].showNotification(title, options);
+								});
+							}
+				});
+			</script>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

@@ -171,28 +171,6 @@ function getLocationAndWeather(city,lat,lon){
   }
 }
 
-
-function loadBackground(lat, lon, weatherTag) {
-  var script_element = document.createElement('script');
-
-  script_element.src = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=1452866c8cea54acd0075022ef573a07&lat=" + lat + "&lon=" + lon + "&accuracy=1&tags=" + weatherTag + "&sort=relevance&extras=url_l&format=json";
-
-  document.getElementsByTagName('head')[0].appendChild(script_element);
-}
-
-function jsonFlickrApi(data){
-  if (data.photos.pages > 0){
-    //var randomPhotoId = parseInt(data.photos.total);
-    var photo = data.photos.photo[Math.floor(Math.random()*parseInt(data.photos.photo.length))];
-    document.querySelector("body").style.backgroundImage = "url('" + photo.url_l + "')";
-    document.querySelector("#image-source").setAttribute("href", "http://www.flickr.com/photos/" + photo.owner + "/" + photo.id);
-  }
-  else{
-    document.querySelector("body").style.backgroundImage = "url('https://fourtonfish.com/tutorials/weather-web-app/images/default.jpg')";
-    document.querySelector("#image-source").setAttribute("href", "https://www.flickr.com/photos/superfamous/310185523/sizes/o/");
-  }
-}
-
 function fullDay(str) {
   switch (str) {
     case 'Tue':
