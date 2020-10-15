@@ -10,26 +10,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="manifest" href="manifest.json" />
-		
-		<link rel="apple-touch-icon" sizes="57x57" href="assets/img/apple-touch-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="assets/img/apple-touch-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-touch-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-touch-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-touch-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="assets/img/apple-touch-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-touch-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="assets/img/apple-touch-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
-		<link rel="manifest" href="assets/img/site.webmanifest">
-		<link rel="mask-icon" href="assets/img/safari-pinned-tab.svg" color="#00a300">
-		<link rel="shortcut icon" href="assets/img/favicon.ico">
-		<meta name="msapplication-TileColor" content="#00a300">
-		<meta name="msapplication-config" content="assets/img/browserconfig.xml">
-		<meta name="theme-color" content="#ffffff">
+		<link rel="stylesheet" href="./assets/css/main.css" />
+		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 
 	</head>
 	<body class="is-preload">
@@ -165,59 +147,7 @@
 					</ul>
 
 			</div>
-		<!--script de notif-->
-			<div id="token"></div>
-			<div id="msg"></div>
-			<div id="notis"></div>
-			<div id="err"></div>
-			<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
-			<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-messaging.js"></script>
-			<script>
-					MsgElem = document.getElementById("msg");
-					TokenElem = document.getElementById("token");
-					NotisElem = document.getElementById("notis");
-					ErrElem = document.getElementById("err");
-					// Initialize Firebase
-					// TODO: Replace with your project's customized code snippet
-					var config = {
-							'messagingSenderId': '136650461628',
-						'apiKey': 'YOUR_API_KEY',
-							'projectId': 'safe-farming',
-							'appId': 'YOUR_APP_ID',
-					};
-					firebase.initializeApp(config);
-
-					const messaging = firebase.messaging();
-					messaging
-							.requestPermission()
-							.then(function () {
-								MsgElem.innerHTML = "Notification permission granted." 
-								console.log("Notification permission granted.");
-							
-								// get the token in the form of promise
-								return messaging.getToken()
-							})
-							.then(function(token) {
-								TokenElem.innerHTML = "token is : " + token
-							})
-							.catch(function (err) {
-								ErrElem.innerHTML =  ErrElem.innerHTML + "; " + err
-								console.log("Unable to get permission to notify.", err);
-							});
-
-					let enableForegroundNotification = true;
-					messaging.onMessage(function(payload) {
-							console.log("Message received. ", payload);
-							NotisElem.innerHTML = NotisElem.innerHTML + JSON.stringify(payload);
-
-							if(enableForegroundNotification) {
-								const {title, ...options} = JSON.parse(payload.data.notification);
-									navigator.serviceWorker.getRegistrations().then(registration => {
-									registration[0].showNotification(title, options);
-								});
-							}
-				});
-			</script>
+		
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

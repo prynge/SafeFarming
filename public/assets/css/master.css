@@ -4,9 +4,6 @@ p {
   padding: 0 1em;
 }
 
-a{
-  color: #fff;
-}
 
 footer {
   position: absolute;
@@ -40,6 +37,21 @@ footer {
 
 .button {
 	width: 20%;
+}
+
+.selections {
+  width: 600px;
+  float: left;
+}
+.map {
+  height: 400px;
+  width: 400px;
+  float: left;
+}
+
+#info {
+  text-align: left;
+  font-size: medium;
 }
 
 @media (min-width: 601px) {

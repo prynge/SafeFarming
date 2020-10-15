@@ -1,6 +1,6 @@
-/*navigator.serviceWorker && navigator.serviceWorker.register('./sw.js').then(function(registration) {
+navigator.serviceWorker && navigator.serviceWorker.register('./sw.js').then(function(registration) {
   console.log('Excellent, registered with scope: ', registration.scope);
-});*/
+});
 
 var nasaData = {
   info: document.querySelector ("#info"),
@@ -78,7 +78,6 @@ function getLocationAndWeather(city,lat,lon){
 
       weatherData.temperatureValue = weatherTemperature;
 
-      loadBackground(position.latitude, position.longitude, weatherSimpleDescription);
       weatherData.wind.innerHTML =  weatherWind;
       weatherData.humidity.innerHTML =  weatherHumidity;
       weatherData.dt.innerHTML =  weatherDt;

@@ -1,13 +1,13 @@
 {
   "name": "Safe Farming",
   "short_name": "Safe Farming",
-  "display": "standalone",
+  "display": "minimal-ui",
   "start_url": "/",
   "theme_color": "#fff",
   "background_color": "#888",
   "icons": [
     {
-      "src": "assets/img/android-chrome-96x96.png",
+      "src": "../assets/img/android-chrome-96x96.png",
       "sizes": "96x96",
       "type": "image/png"
     }
